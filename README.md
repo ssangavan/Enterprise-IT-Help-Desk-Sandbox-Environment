@@ -52,7 +52,7 @@ A virtualized corporate IT environment built to practice the day-to-day work of 
 A Bridged Adapter was enabled temporarily on the VMs whenever internet access was required (Action1 agent enrollment).
 
 ### Network Diagram
-
+```
                 +-----------------------------+
                 |   Host Machine (VirtualBox) |
                 +--------------+--------------+
@@ -72,6 +72,7 @@ A Bridged Adapter was enabled temporarily on the VMs whenever internet access wa
                 \                              /
                  \------ Action1 (cloud) ------/
 
+```
 > 📸 **Screenshot:** `screenshots/00-overview/network-diagram.png`
 > *(Optional: replace the ASCII diagram above with a draw.io / diagrams.net export.)*
 
