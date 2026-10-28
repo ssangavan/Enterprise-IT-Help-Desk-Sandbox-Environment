@@ -30,7 +30,7 @@ A virtualized corporate IT environment built to practice the day-to-day work of 
 
 | Area | What I did |
 |---|---|
-| Infrastructure | Deployed a Windows Server 2022 Domain Controller and a Windows 11 Enterprise client in VirtualBox |
+| Infrastructure | Deployed a Windows Server 2022 Domain Controller and a Windows 11 Enterprise client in VirtualBox, joined to a new sangavantech.com |
 | IAM | Created OUs, users, and security groups in AD DS; simulated onboarding and Tier-1 tickets |
 | Security | Enforced password, lockout, and desktop restriction policies through GPOs |
 | Data security | Built a central file share with NTFS permissions mapped to AD security groups |
@@ -44,32 +44,33 @@ A virtualized corporate IT environment built to practice the day-to-day work of 
 
 | VM Name | OS | Role | Hostname | IP Address |
 |---|---|---|---|---|
-| DC01 | Windows Server 2022 | Domain Controller, DNS, File Server | `[DC-HOSTNAME]` | `[STATIC-IP]` |
-| CLIENT01 | Windows 11 Enterprise | Domain-joined endpoint | `[CLIENT-HOSTNAME]` | DHCP / `[IP]` |
+| DC01 | Windows Server 2022 | Domain Controller, DNS, File Server | `[TO-DC01]` | `[10.1.10.1]` (static) |
+| CLIENT01 | Windows 11 Enterprise | Domain-joined endpoint | `[DESKTOP01]` | `[10.1.10.3]` |
 
-**Domain name:** `[yourdomain.local]`
-**Network mode:** `[Internal Network / NAT Network / Host-Only]` (VirtualBox)
+**Domain name:** `[sangavantech.com]`
+**Network mode:** VirtualBox Host-Only Adapter for the isolated lab network (static 10.1.10.0/24 addresses). 
+A Bridged Adapter was enabled temporarily on the VMs whenever internet access was required (Action1 agent enrollment).
 
 ### Network Diagram
 
-```
                 +-----------------------------+
                 |   Host Machine (VirtualBox) |
                 +--------------+--------------+
                                |
-                   [Internal / NAT Network]
+                   [Host-Only Network 10.1.10.0/24]
+                   (+ temporary Bridged Adapter for internet)
                                |
           +--------------------+--------------------+
           |                                         |
  +--------+---------+                     +---------+--------+
- |  DC01            |                     |  CLIENT01        |
- |  Server 2022     |<--- domain join --->|  Windows 11 Ent. |
+ |  TO-DC01         |                     |  DESKTOP01       |
+ |  10.1.10.1       |<--- domain join --->|  10.1.10.3       |
+ |  Server 2022     |                     |  Windows 11      |
  |  AD DS, DNS,     |                     |  Action1 agent   |
- |  File Share      |                     |                  |
+ |  File Shares     |                     |                  |
  +------------------+                     +------------------+
                 \                              /
                  \------ Action1 (cloud) ------/
-```
 
 > 📸 **Screenshot:** `screenshots/00-overview/network-diagram.png`
 > *(Optional: replace the ASCII diagram above with a draw.io / diagrams.net export.)*
