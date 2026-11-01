@@ -106,10 +106,6 @@ Install-ADDSForest -DomainName "sangavantech.com" `
   -InstallDns -Force
 ```
 
-> 📸 `screenshots/01-infrastructure/04-adds-role-install.png` - *Add Roles and Features wizard / install progress.*
-> 📸 `screenshots/01-infrastructure/05-dc-promotion.png` - *Promotion to domain controller (new forest).*
-> 📸 `screenshots/01-infrastructure/06-aduc-console.png` - *Active Directory Users and Computers showing the new domain.*
-
 ### 3.4 Deploy the Windows 11 Client and Join the Domain
 
 1. Created the Windows 11 Enterprise VM (`[12]` GB RAM, `[80]` GB disk) on the same virtual network.
