@@ -405,17 +405,6 @@ Generated an endpoint compliance report.
 
 ---
 
-## 10. Future Improvements
-
-- [ ] Deploy a help desk ticketing system (e.g., osTicket, GLPI, Spiceworks) and log the Tier-1 tickets formally
-- [ ] Add a second DC for redundancy and replication
-- [ ] Configure DHCP on the server
-- [ ] Add Windows Server Update Services (WSUS) or compare with Action1
-- [ ] Implement LAPS for local administrator passwords
-- [ ] Script bulk user creation from CSV with PowerShell
-
----
-
 ## Repository Structure
 
 ```
