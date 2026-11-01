@@ -18,7 +18,6 @@ A virtualized corporate IT environment built to practice the day-to-day work of 
 7. [Phase 5 - Endpoint & Patch Management](#7-phase-5---endpoint--patch-management)
 8. [Troubleshooting & Lessons Learned](#8-troubleshooting--lessons-learned)
 9. [Skills Demonstrated](#9-skills-demonstrated)
-10. [Future Improvements](#10-future-improvements)
 
 ---
 
@@ -73,11 +72,6 @@ A Bridged Adapter was enabled temporarily on the VMs whenever internet access wa
                  \------ Action1 (cloud) ------/
 
 ```
-> 📸 **Screenshot:** `screenshots/00-overview/network-diagram.png`
-> *(Optional: replace the ASCII diagram above with a draw.io / diagrams.net export.)*
-
-> 📸 **Screenshot:** `screenshots/00-overview/virtualbox-manager.png`
-> *VirtualBox Manager showing both VMs.*
 
 ---
 
@@ -85,12 +79,11 @@ A Bridged Adapter was enabled temporarily on the VMs whenever internet access wa
 
 ### 3.1 Create the Windows Server 2022 VM
 
-1. Created a new VM in VirtualBox with `[X]` GB RAM, `[X]` CPU cores, and `[X]` GB disk.
+1. Created a new VM in VirtualBox with `[12]` GB RAM, `[6]` CPU cores, and `[80]` GB disk.
 2. Mounted the Windows Server 2022 ISO and completed installation (Desktop Experience).
 3. Installed VirtualBox Guest Additions.
 
-> 📸 `screenshots/01-infrastructure/01-dc-vm-settings.png` - *VirtualBox settings for the DC VM (System, Network tabs).*
-> 📸 `screenshots/01-infrastructure/02-server-install-complete.png` - *Server Manager dashboard after first login.*
+<img width="958" height="598" alt="image" src="https://github.com/user-attachments/assets/1491207a-4c26-4797-bdf3-9f606714070a" />
 
 ### 3.2 Configure Server Basics
 
