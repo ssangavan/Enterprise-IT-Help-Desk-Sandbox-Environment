@@ -258,8 +258,8 @@ Inheritance was disabled on each department folder, and access was granted only 
 
 ```powershell
 icacls "[D:\CompanyShare]\HR" /inheritance:r
-icacls "[D:\CompanyShare]\HR" /grant "[YOURDOMAIN]\[GG-HR]:(OI)(CI)M"
-icacls "[D:\CompanyShare]\HR" /grant "[YOURDOMAIN]\[GG-IT]:(OI)(CI)M"
+icacls "[D:\CompanyShare]\HR" /grant "[SANGAVANTECH]\[GG-HR]:(OI)(CI)M"
+icacls "[D:\CompanyShare]\HR" /grant "[SANGAVANTECH]\[GG-IT]:(OI)(CI)M"
 ```
 
 ### 6.4 Access Testing from the Client
