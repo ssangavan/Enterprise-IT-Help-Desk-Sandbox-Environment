@@ -250,8 +250,6 @@ Inheritance was disabled on each department folder, and access was granted only 
 | IT | Full Control | - | - | - |
 | Public | Modify | Read | Read | Read |
 
-> *Edit this matrix so it matches your actual configuration.*
-
 ```powershell
 icacls "[D:\CompanyShare]\HR" /inheritance:r
 icacls "[D:\CompanyShare]\HR" /grant "[SANGAVANTECH]\[GG-HR]:(OI)(CI)M"
